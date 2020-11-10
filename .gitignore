@@ -1,1 +1,6 @@
 xcuserdata/
+**/.DS_Store
+DerivedData/
+build/
+*.lock
+**/Pods

@@ -9,6 +9,7 @@ import Foundation
 
 struct PodcastClip {
     var id: String
+    var name: String
     var url: String {
         return ""
     }

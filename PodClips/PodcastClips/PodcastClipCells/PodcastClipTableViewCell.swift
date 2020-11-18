@@ -1,5 +1,5 @@
 //
-//  CategoryDetailTableViewCell.swift
+//  PodcastClipTableViewCell.swift
 //  PodClips
 //
 //  Created by Ross Harding on 11/10/20.
@@ -9,6 +9,8 @@ import UIKit
 
 class PodcastClipTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,7 +22,7 @@ class PodcastClipTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureData(with viewModel: CategoryTableCellViewModel) {
+    func configureData(with viewModel: PodcastClipCellViewModel) {
         title.text = viewModel.name
     }
     

@@ -14,11 +14,11 @@ class PodcastClipsTableViewController: ParentTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        registerTableViewCell()
+    }
+    
+    func registerTableViewCell() {
+        tableView.register(UINib(nibName: "PodcastClipTableViewCell", bundle: nil), forCellReuseIdentifier: "PodcastClipTableViewCell")
     }
 
     // MARK: - Table view data source
@@ -35,11 +35,11 @@ class PodcastClipsTableViewController: ParentTableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as? CategoryTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PodcastClipTableViewCell", for: indexPath) as? PodcastClipTableViewCell else {
             return UITableViewCell()
         }
         let podcastClip = viewModel.podcastClip(at: indexPath.row)
-        let viewModel = PodcastClipsTableViewModel(category: <#T##Category#>)
+        let viewModel = PodcastClipCellViewModel(podcastClip: podcastClip)
         cell.configureData(with: viewModel)
         return cell
     }

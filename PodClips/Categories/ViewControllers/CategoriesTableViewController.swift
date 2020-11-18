@@ -60,6 +60,9 @@ class CategoriesTableViewController: ParentTableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as? CategoryTableViewCell else {
             return UITableViewCell()
         }
+        let category = viewModel.category(at: indexPath.row)
+        let viewModel = CategoryTableCellViewModel(category: category)
+        cell.configureData(with: viewModel)
         return cell
     }
     

@@ -21,4 +21,8 @@ class CategoryTableViewCell: UITableViewCell {
 
     }
     
+    func configureData(with viewModel: CategoryTableCellViewModel) {
+        title.text = viewModel.name
+    }
+    
 }

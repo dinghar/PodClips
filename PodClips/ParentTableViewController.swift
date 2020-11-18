@@ -46,9 +46,10 @@ class ParentTableViewController: UITableViewController {
 extension ParentTableViewController: CategoriesTableViewControllerDelegate {
     
     func controllerDidSelectCategory(category: Category) {
-        let categoryDetailViewController = CategoryDetailTableViewController()
-        let viewModel = CategoryDetailTableViewModel(category: category)
+        let categoryDetailViewController = PodcastClipsTableViewController()
+        let viewModel = PodcastClipsTableViewModel(category: category)
         categoryDetailViewController.viewModel = viewModel
         self.navigationController?.pushViewController(categoryDetailViewController, animated: true)
     }
 }
+

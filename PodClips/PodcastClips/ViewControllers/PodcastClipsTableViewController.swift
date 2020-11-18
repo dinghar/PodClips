@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PodcastClipsTableViewControllerDelegate {
+    func controllerDidSelectPodcastClip(podcastClip: PodcastClip)
+}
+
 class PodcastClipsTableViewController: ParentTableViewController {
     
     var viewModel: PodcastClipsTableViewModel!
@@ -42,6 +46,13 @@ class PodcastClipsTableViewController: ParentTableViewController {
         let viewModel = PodcastClipCellViewModel(podcastClip: podcastClip)
         cell.configureData(with: viewModel)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let podcastClip = viewModel?.podcastClip(at: indexPath.row) else {
+            return
+        }
+        controllerDidSelectPodcastClip(podcastClip: podcastClip)
     }
 
 }

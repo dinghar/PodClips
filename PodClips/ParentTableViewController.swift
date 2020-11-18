@@ -46,10 +46,19 @@ class ParentTableViewController: UITableViewController {
 extension ParentTableViewController: CategoriesTableViewControllerDelegate {
     
     func controllerDidSelectCategory(category: Category) {
-        let categoryDetailViewController = PodcastClipsTableViewController()
+        let podcastClipsViewController = PodcastClipsTableViewController()
         let viewModel = PodcastClipsTableViewModel(category: category)
-        categoryDetailViewController.viewModel = viewModel
-        self.navigationController?.pushViewController(categoryDetailViewController, animated: true)
+        podcastClipsViewController.viewModel = viewModel
+        self.navigationController?.pushViewController(podcastClipsViewController, animated: true)
     }
 }
 
+extension ParentTableViewController: PodcastClipsTableViewControllerDelegate {
+    
+    func controllerDidSelectPodcastClip(podcastClip: PodcastClip) {
+        let podcastClipViewController = PodcastClipViewController()
+        let viewModel = PodcastClipViewModel(podcastClip: podcastClip)
+        podcastClipViewController.viewModel = viewModel
+        self.navigationController?.pushViewController(podcastClipViewController, animated: true)
+    }
+}

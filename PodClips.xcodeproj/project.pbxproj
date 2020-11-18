@@ -10,6 +10,8 @@
 		0C85B4E22565CFF3008F4998 /* CategoryTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85B4E12565CFF3008F4998 /* CategoryTableCellViewModel.swift */; };
 		0C85B4F32565D67E008F4998 /* PodcastClipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85B4F22565D67E008F4998 /* PodcastClipViewModel.swift */; };
 		0C85B4FB2565D723008F4998 /* PodcastClipCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85B4FA2565D723008F4998 /* PodcastClipCellViewModel.swift */; };
+		0C85B50E2565DAC5008F4998 /* PodcastClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85B50C2565DAC5008F4998 /* PodcastClipViewController.swift */; };
+		0C85B50F2565DAC5008F4998 /* PodcastClipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C85B50D2565DAC5008F4998 /* PodcastClipViewController.xib */; };
 		0C86ECD8255B373400DBCC0A /* PodcastClipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86ECD7255B373400DBCC0A /* PodcastClipsTableViewController.swift */; };
 		0C86ECE9255B379200DBCC0A /* PodcastClipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86ECE7255B379200DBCC0A /* PodcastClipTableViewCell.swift */; };
 		0C86ECEA255B379200DBCC0A /* PodcastClipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECE8255B379200DBCC0A /* PodcastClipTableViewCell.xib */; };
@@ -63,6 +65,8 @@
 		0C85B4E12565CFF3008F4998 /* CategoryTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableCellViewModel.swift; sourceTree = "<group>"; };
 		0C85B4F22565D67E008F4998 /* PodcastClipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastClipViewModel.swift; sourceTree = "<group>"; };
 		0C85B4FA2565D723008F4998 /* PodcastClipCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastClipCellViewModel.swift; sourceTree = "<group>"; };
+		0C85B50C2565DAC5008F4998 /* PodcastClipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastClipViewController.swift; sourceTree = "<group>"; };
+		0C85B50D2565DAC5008F4998 /* PodcastClipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastClipViewController.xib; sourceTree = "<group>"; };
 		0C86ECD7255B373400DBCC0A /* PodcastClipsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastClipsTableViewController.swift; sourceTree = "<group>"; };
 		0C86ECE7255B379200DBCC0A /* PodcastClipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastClipTableViewCell.swift; sourceTree = "<group>"; };
 		0C86ECE8255B379200DBCC0A /* PodcastClipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastClipTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				0C86ECD7255B373400DBCC0A /* PodcastClipsTableViewController.swift */,
+				0C85B50C2565DAC5008F4998 /* PodcastClipViewController.swift */,
+				0C85B50D2565DAC5008F4998 /* PodcastClipViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				0C86ED36255B3B5300DBCC0A /* NoteDetailTableViewCell.xib in Resources */,
 				0C86ED0C255B3AA500DBCC0A /* NoteTableViewCell.xib in Resources */,
 				0C935BFF254387CA002C0701 /* Main.storyboard in Resources */,
+				0C85B50F2565DAC5008F4998 /* PodcastClipViewController.xib in Resources */,
 				0C935C4225438A30002C0701 /* CategoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +471,7 @@
 				0C86ECF3255B37C900DBCC0A /* PodcastClipsTableViewModel.swift in Sources */,
 				0C86ED4D255B3C4B00DBCC0A /* ParentTableViewController.swift in Sources */,
 				0C86ED0B255B3AA500DBCC0A /* NoteTableViewCell.swift in Sources */,
+				0C85B50E2565DAC5008F4998 /* PodcastClipViewController.swift in Sources */,
 				0C86ECD8255B373400DBCC0A /* PodcastClipsTableViewController.swift in Sources */,
 				0C86ECFC255B37E900DBCC0A /* PodcastClip.swift in Sources */,
 				0C935BF8254387CA002C0701 /* AppDelegate.swift in Sources */,

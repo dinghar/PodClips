@@ -4,3 +4,4 @@ DerivedData/
 build/
 *.lock
 **/Pods
+**/GoogleService-Info.plist

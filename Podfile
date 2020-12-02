@@ -6,7 +6,9 @@ target 'PodClips' do
   use_frameworks!
 
   # Pods for PodClips
+  pod 'CodableFirebase'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
 

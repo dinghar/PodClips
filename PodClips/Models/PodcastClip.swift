@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct PodcastClip {
-    var id: String
+struct PodcastClip: Codable {
+//    var id: String
     var name: String
-    var url: String {
-        return ""
+//    var url: String {
+//        return ""
+//    }
+    
+    enum CodingKeys: CodingKey {
+        case name
     }
 }

@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct Category {
-    var id: String
-    var name: String
-    var podcastClips: [PodcastClip]
+struct Category: Codable {
+    let name: String
+    let timestamp: Int
+    let podcastIds: [Int]?
+    
+    enum CodingKeys: CodingKey {
+        case name, timestamp, podcastIds
+    }
 }

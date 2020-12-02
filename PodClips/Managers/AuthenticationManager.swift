@@ -12,7 +12,8 @@ import FirebaseAuth
 class AuthenticationManager: NSObject {
     
     func getUserId() -> String? {
-        return Auth.auth().currentUser?.uid
+        return "ross123"
+//        return Auth.auth().currentUser?.uid
     }
 
 }

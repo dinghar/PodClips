@@ -45,6 +45,7 @@
 		0C935C4225438A30002C0701 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C935C4025438A30002C0701 /* CategoryTableViewCell.xib */; };
 		0C935C5C25438AFD002C0701 /* CategoriesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C935C5B25438AFD002C0701 /* CategoriesTableViewModel.swift */; };
 		0C935C6E25438B0D002C0701 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C935C6D25438B0D002C0701 /* Category.swift */; };
+		0CA9F39925783AC8008209BE /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9F39825783AC8008209BE /* Date+extension.swift */; };
 		18D6C9E9B6EA675604F3D9E5 /* Pods_PodClips_PodClipsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D738A630B73098AA05321A44 /* Pods_PodClips_PodClipsUITests.framework */; };
 		5CECFD1C6D7920DCD0D0579E /* Pods_PodClipsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0F2A40B486F986C371098 /* Pods_PodClipsTests.framework */; };
 		A90952A2E9C2F889986E0AAC /* Pods_PodClips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57F2C653F29F5EA61A9975A /* Pods_PodClips.framework */; };
@@ -112,6 +113,7 @@
 		0C935C4025438A30002C0701 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		0C935C5B25438AFD002C0701 /* CategoriesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewModel.swift; sourceTree = "<group>"; };
 		0C935C6D25438B0D002C0701 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0CA9F39825783AC8008209BE /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		2DDFE266D64416A888CD4D14 /* Pods-PodClips-PodClipsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodClips-PodClipsUITests.debug.xcconfig"; path = "Target Support Files/Pods-PodClips-PodClipsUITests/Pods-PodClips-PodClipsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33619DCFD331CCB5DF624FCC /* Pods-PodClips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodClips.debug.xcconfig"; path = "Target Support Files/Pods-PodClips/Pods-PodClips.debug.xcconfig"; sourceTree = "<group>"; };
 		73E0F2A40B486F986C371098 /* Pods_PodClipsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodClipsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +310,7 @@
 				0C07288425687B01001EC941 /* TableViewCells */,
 				0C07288B25687B9F001EC941 /* Managers */,
 				0C07288825687B66001EC941 /* Models */,
+				0CA9F39725783AB3008209BE /* Extensions */,
 				0C07288C25687BB4001EC941 /* SupportFiles */,
 			);
 			path = PodClips;
@@ -329,6 +332,14 @@
 				0C935C1B254387CD002C0701 /* Info.plist */,
 			);
 			path = PodClipsUITests;
+			sourceTree = "<group>";
+		};
+		0CA9F39725783AB3008209BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CA9F39825783AC8008209BE /* Date+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5231745CE40DF18BC00F4484 /* Frameworks */ = {
@@ -611,6 +622,7 @@
 				0C935BF8254387CA002C0701 /* AppDelegate.swift in Sources */,
 				0C86ED11255B3AB200DBCC0A /* NoteTableViewModel.swift in Sources */,
 				0C07287D2568785A001EC941 /* AuthenticationManager.swift in Sources */,
+				0CA9F39925783AC8008209BE /* Date+extension.swift in Sources */,
 				0C935BFA254387CA002C0701 /* SceneDelegate.swift in Sources */,
 				0C86ED57255B43A700DBCC0A /* UserDataError.swift in Sources */,
 				0C07282125687512001EC941 /* PodClipLoader.swift in Sources */,
@@ -803,7 +815,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CKZ7HZ294Y;
-				INFOPLIST_FILE = PodClips/Info.plist;
+				INFOPLIST_FILE = PodClips/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +835,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CKZ7HZ294Y;
-				INFOPLIST_FILE = PodClips/Info.plist;
+				INFOPLIST_FILE = PodClips/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

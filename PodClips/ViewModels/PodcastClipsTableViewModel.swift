@@ -20,7 +20,8 @@ struct PodcastClipsTableViewModel {
     }
     
     var podcastClips: [PodcastClip] {
-        category.podcastClips
+//        category.podcastClips
+        []
     }
     
     func podcastClip(at index: Int) -> PodcastClip? {

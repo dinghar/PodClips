@@ -13,7 +13,11 @@ protocol CategoriesTableViewControllerDelegate {
 
 class CategoriesTableViewController: ParentTableViewController {
     
-    var viewModel: CategoriesTableViewModel!
+    var viewModel: CategoriesTableViewModel! {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +26,22 @@ class CategoriesTableViewController: ParentTableViewController {
     }
     
     func setupView() {
-        configureViewModel(for: nil)
+        configureViewModel(for: [Category]())
         registerTableViewCell()
         fetchData()
     }
     
     func fetchData() {
         presentLoadingView()
-        dataManager.fetchUserData { userData in
+        dataManager.fetchUserCategories { (userCategories) in
             self.hideLoadingView()
-            self.configureViewModel(for: userData)
+            self.configureViewModel(for: userCategories)
             self.tableView.reloadData()
         }
     }
     
-    func configureViewModel(for userData: UserData?) {
-        let viewModel = CategoriesTableViewModel(userData: userData)
+    func configureViewModel(for categories: [Category]) {
+        let viewModel = CategoriesTableViewModel(categories: categories)
         self.viewModel = viewModel
     }
     
@@ -45,6 +49,27 @@ class CategoriesTableViewController: ParentTableViewController {
         tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableViewCell")
     }
 
+    @IBAction func addCategory(_ sender: Any) {
+        var textfield: UITextField?
+        let alert = UIAlertController(title: "Add Category", message: nil, preferredStyle: .alert)
+        alert.addTextField { (newCategoryTextfield) in
+            textfield = newCategoryTextfield
+        }
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (_) in
+            guard let name = textfield?.text else {
+                return
+            }
+            if !name.isEmpty && name.count > 0 {
+                self.dataManager.addCategory(name) { (categories) in
+                    self.configureViewModel(for: categories)
+                }
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true) {
+            
+        }
+    }
     
     // MARK: - Table view data source
 
